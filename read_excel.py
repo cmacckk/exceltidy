@@ -64,18 +64,19 @@ def openpyxl_datas_to_worksheet(datas: list, worksheet: Worksheet):
             worksheet.cell(row=row + 1, column=col + 1).value = datas[row][col]
 
 def xlwings_get_workbook_worksheet(filename, sheet_name=None, visible=False, add_book=False, display_alerts=False, screen_updating=False):
-    app = xw.App(visible=visible, add_book=add_book)
-    app.display_alerts = display_alerts
-    app.screen_updating = screen_updating
+    # app = xw.App(visible=visible, add_book=add_book)
+    with xw.App(visible=visible, add_book=add_book) as app:
+        app.display_alerts = display_alerts
+        app.screen_updating = screen_updating
 
-    workbook = app.books.open(filename)
+        workbook = app.books.open(filename)
 
-    if sheet_name is None:
-        worksheet = workbook.sheets[0]
-    else:
-        worksheet = workbook.sheets[sheet_name]
+        if sheet_name is None:
+            worksheet = workbook.sheets[0]
+        else:
+            worksheet = workbook.sheets[sheet_name]
 
-    return workbook, worksheet
+        return workbook, worksheet
 
 def xlwings_replace_worksheet_data(origin_worksheet: xw.Sheet, to_be_replaced_worksheet: xw.Sheet):
     origin_worksheet.api.copy()
