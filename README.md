@@ -17,6 +17,8 @@
 
 `openpyxl`获取`list[list, list, ...]` `openpyxl.workbook.Workbook` `openpyxl.worksheet.worksheet.Worksheet`
 ```python
+from exceltidy.exceltidy import *
+
 worksheet_datas, workbook, worksheet = openpyxl_get_datas_workbook_worksheet(filename="./test.xlsx")
 
 # 通过工作表获取数据
@@ -33,6 +35,8 @@ workbook.close()
 `xlwings`获取`App` `xw.Book` `xw.Sheet`
 `sheet_name`为`None`时读取返回第一个工作表
 ```python
+from exceltidy.exceltidy import *
+
 app, workbook, worksheet = xlwings_get_app_workbook_worksheet('./test.xlsx')
 
 # 

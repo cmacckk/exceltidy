@@ -1,10 +1,9 @@
-from distutils.core import setup
-from setuptools import find_packages
+import setuptools
  
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
  
-setup(
+setuptools.setup(
     name="exceltidy",
     version="0.0.3",
     author="cmacckk",
@@ -13,7 +12,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/cmacckk/exceltidy",
-    packages=find_packages(),
+    packages=setuptools.find_packages(),
     install_requires=[
         'xlwings',
         'openpyxl'
