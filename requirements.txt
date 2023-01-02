@@ -1,3 +1,2 @@
-xlwings
-openpyxl
-pandas
+xlwings==0.28.7
+openpyxl==3.0.10
