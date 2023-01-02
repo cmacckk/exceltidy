@@ -1,5 +1,7 @@
 # Excel Tidy
 
+[![PyPI version](https://badge.fury.io/py/exceltidy.svg)](https://badge.fury.io/py/exceltidy)
+
 在工作中遇到的一些需要处理的情况,编写为库,方便后续操作
 
 `openpyxl`前缀的函数为基于`openpyxl`编写
@@ -8,7 +10,7 @@
 注意`xlwings`不支持`linux`,在`linux`上运行可能报错
 
 使用方法
-`git clone git@github.com:cmacckk/exceltidy.git`
+`git clone https://github.com/cmacckk/exceltidy.git`
 
 安装依赖
 `pip install -r requirements.txt`
