@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
  
 setup(
     name="exceltidy",
-    version="0.0.2",
+    version="0.0.3",
     author="cmacckk",
     author_email="emailforgty@163.com",
     description="Based on openpyxl and xlwings to facilitate Excel processing",
