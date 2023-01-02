@@ -7,7 +7,6 @@ from config import *
 
 logging.basicConfig(format=FORMAT, level=logging.DEBUG, filename=LOG_PATH)
 
-
 def openpyxl_get_datas_workbook_worksheet(filename, sheet_name=None, data_only=True, read_only=True):
     """ 获取Excel数据和WorkSheet WorkBook
 
